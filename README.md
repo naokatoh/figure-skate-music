@@ -38,7 +38,7 @@
 - [Yuma Kagiyama \- Wikipedia](https://en.wikipedia.org/wiki/Yuma_Kagiyama) 
 - [Shoma Uno \- Wikipedia](https://en.wikipedia.org/wiki/Shoma_Uno)
 - [Music for Figure Skating: Here's What Athletes Will Be Playing Tonight \- The New York Times](https://www.nytimes.com/2022/02/09/sports/olympics/playlist-mens-free-skate.html)
-- - [2022 Olympics: Figure skaters on how they pick music for programs](https://www.usatoday.com/story/sports/olympics/beijing/2022/02/15/olympic-figure-skaters-how-pick-music-programs/6699746001/)
+- [2022 Olympics: Figure skaters on how they pick music for programs](https://www.usatoday.com/story/sports/olympics/beijing/2022/02/15/olympic-figure-skaters-how-pick-music-programs/6699746001/)
 - [羽生結弦「音符の上を振り付けしながら…」SPのピアノ曲への思い \- 2022北京オリンピック：朝日新聞デジタル](https://digital.asahi.com/articles/ASPDS65X8PDSPTQP003.html?iref=pc_ss_date_article)
 
 
