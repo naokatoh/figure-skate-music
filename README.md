@@ -7,11 +7,13 @@
 - Figure skating is not only about jumps and spin. Musical interpretation is also one of the elements evaluated by the judges. 
 - Until the 2014-2015 season, single and pair figure skaters were not allowed to skate to music with words.
 - Now skaters can select from a wide range of music!
-- At the Beijing Olympics, music selected by men's single figure skaters were particularly ecletic! (Daft Punk, Aarosmith, Santana...etc) 
+- At the Beijing Olympics, music selected by men's single figure skaters were particularly ecletic! (Daft Punk, Aarosmith, Santana...etc)
 
 ## What I did with which skill
 - Python (BeautifulSoup, Selenium, pandas) :for data analysis
 - datawrapper :for data viz
+- I analyzed three medalists, Nathan Chen, Yuma Kagiyama and Shoma Uno
+- I scraped Wikipedia pages of each skaters and made song lists that they used in each season.
 
 - **Thing that I tried and feel satisfied**: Successfully scraped a Wikipedia page's table with ease😊 Datawrapper skills and data biz😊
 - **Thing that I struggled with** : So many songs's pages are not even exsit, so I ended up seach music genres of many, many songs manually...
@@ -19,7 +21,16 @@
 
 
 ## Files
-- ```urchin_state_dw.xlsx```is a table I used to make the first chart in the [article](https://naokatoh.github.io/sea_urchin/).
+- ```chen_list_final_dw3.csv```is a data I used to make Chen's chart in the [article](...)
+- ```kagi_list.csv```is a data I used to make Kagiyama's chart
+- ```uno_list.csv```is a data I used to make Uno's chart 
+
+## Chart
+- [Nathan Chen](https://datawrapper.dwcdn.net/nDZkP/9) 
+- [Yuma Kagiyama](https://datawrapper.dwcdn.net/MxXLy/3/)
+- [Shoma Uno](https://datawrapper.dwcdn.net/c2wgd/6/)
+
+
 
 
 ## Reference
