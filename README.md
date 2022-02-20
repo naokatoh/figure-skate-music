@@ -21,7 +21,7 @@
 
 
 ## Files
-- ```chen_list_final_dw3.csv```is a data I used to make Chen's chart in the [article](...)
+- ```chen_list_final_dw3.csv```is a data I used to make Chen's chart in the [article](https://naokatoh.github.io/figure_skate_music/)
 - ```kagi_list.csv```is a data I used to make Kagiyama's chart
 - ```uno_list.csv```is a data I used to make Uno's chart 
 
