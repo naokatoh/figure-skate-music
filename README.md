@@ -16,7 +16,7 @@
 - I scraped Wikipedia pages of each skaters and made song lists that they used in each season.
 
 - **Thing that I tried and feel satisfied**: Successfully scraped a Wikipedia page's table with ease😊 Datawrapper skills and data biz😊
-- **Thing that I struggled with** : So many songs's pages are not even exsit, so I ended up seach music genres of many, many songs manually...
+- **Thing that I struggled with** : Scraping the href and find music genres from a Wilipedia page. So many songs's pages are not even exsit, so I ended up seach music genres of many, many songs manually...
 - **Thing that I tried but couldn't complete**: There were so many music data missing! It seems like there used to be a database for figure skating music (http://www.skatemusiclist.com/) but it's gone. So I could have tried women's single skating music, but didn't have enough time for it. 
 
 
