@@ -70,6 +70,7 @@ img {
 
 .background-1 {
   background-image: url(Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353_chen3.jpg);
+ max-width: 100%;
 }
 
 
@@ -83,6 +84,7 @@ img {
   
 }
 .full-size-image img{
+    max-width: 100%;
     width: 100%;
     height: 100%;
 }
