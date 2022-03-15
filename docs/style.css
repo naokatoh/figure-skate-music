@@ -47,7 +47,7 @@ img {
 
 .fixed-background h1{
   position: absolute;
-  
+  max-width: 100%;
   top: 70%;
   left: 20%;
 
