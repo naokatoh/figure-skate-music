@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     background-image:url("ice_age.png");
     background-repeat: repeat;
+    background-size: contain;
 
     
 }
