@@ -1,152 +1,444 @@
 <!DOCTYPE html>
+<html lang="en"></html>
 <html>
     <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700 rel="stylesheet">
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer ></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+ 
+     <meta property="og:title" content="Figure Skating">
+     <meta property="og:description" content="Figure skaters now play diverse songs on ice,
+     See top skaters' choice of music">
+     <meta property="og:type" content="article">
+     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg/512px-Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg">
+     <meta name="twitter:card" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg/512px-Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg">
+     <meta name="twitter:creator" content="@hidaka_nao">
+
+
+     <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-image:url("ice_age.png");
+            background-repeat: repeat;
+
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color:#333;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+
+		.top-picture {
+            margin:auto;
+            max-width: 800px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 3rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+            color: #333;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            color:#666;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+            color:#666;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:700px;
+            padding:0px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+        
+        .chart-row {
+            display:flex;
+            /* justify-content: space-between; */
+            margin-top:0px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            /* margin:0px auto 5px auto; */
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:0 ;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:720px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+                margin: auto;
+				/* margin-left: auto;
+               margin-right: auto; */
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+        
+        #g-ratmouse_svg-_1, #g-ratmouse_svg-medium, #g-ratmouse_svg-_2 {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-ratmouse_svg-_2 {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-ratmouse_svg-_1 {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-ratmouse_svg-medium {
+                display: block;
+            }
+        }
+
+    </style>
+
+
+<style>
+    .row-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 2em;
+    }
+    
+    .column-container {
+      flex-grow: 1;
+    }
+    
+    @media (max-width: 350px) {
+      .row-container {
+        flex-direction: column;
+      }
+    }
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="favicon-32x32.png">
         <title>Music in Men's Figure Skating</title>
-        <link rel="stylesheet" href="style.css">
-                                             
+        <!-- <link rel="stylesheet" href="style.css"> -->
+
     </head>
-    <body>
-   
+    <body class="light-theme">
+     <div class="header">
+     <p class="kicker">Figure Skating</p>
+      <h1 class="headline">Figure skaters now play diverse songs on ice, See top skaters' choice of music</h1>
+      <h2 class="subhead">Classical music used to be standard skating songs. The men’s figure skating programs at this year’s Olympics were particularly musically eclectic.</h2>
+      <p class="byline">By <a href ="https://naokatoh.github.io/">Nao Hidaka
+           Kato</p>
+      <p class="date">Feb 21, 2022</p>
+    </div>
 
-        <div class="fixed-background background-1">
-            <h1><p>Figure skaters now play diverse songs on ice,</p>
-
-            <p>See top skaters' choice of music</p></h1>
-            
-
-        </div>
-         
-        <div class="scroll-background  background-color-1">
-         
-     
-
-
-
-       Nathan Chen/ <a href="https://commons.wikimedia.org/wiki/File:Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg">Aude Mugnier</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
-        
+    <div class="top-picture">   
+        <a title="Aude Mugnier, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg"><img width="1024" alt="Ok 2019 Internationaux de France Saturday medals men 8D9A8353" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg/1024px-Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg"></a>
+        <p class="caption">
+        <a href="https://commons.wikimedia.org/wiki/File:Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg">Aude Mugnier</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+    </p>
+      
+    </div>    
    
         
-        <div class="text-container" id="fgskate">
-         
-            <br>
-
-            <br>
-            <h3>Classical music used to be standard skating songs. The men’s figure skating programs at this year’s Olympics were particularly musically eclectic.</h3>
-            <h4>by <a href ="https://naokatoh.github.io/">Nao Kato</a>, Feb 21, 2021</h4>
+    <br>
+    <br>
+    <div class="story-body">
             
             
             
-            <p> Figure skating is not only about jumps and spinning. Music is an indispensable component of the sport, with the potential to enhance performance and earn competitors a higher score. 
+            <p class="body-text serif">Figure skating is not only about jumps and spinning. Music is an indispensable component of the sport, with the potential to enhance performance and earn competitors a higher score. 
 
 
             </p>
             
-            <p>
+            <p class="body-text serif">
                 “In my mind, I can see musical notes on ice,” said Yuzuru Hanyu of Japan, a two-time Olympic champion, in a 2015 <a href="https://digital.asahi.com/articles/ASQ2801KKQ27UTQP02D.html">interview</a>. “While doing the choreography, I skate on the notes.” 
             </p>
-            <a title="HanyuMuse, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:2020_4CC_Yuzu_Seimei2.jpg"><img width="512" alt="2020 4CC Yuzu Seimei2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/2020_4CC_Yuzu_Seimei2.jpg/512px-2020_4CC_Yuzu_Seimei2.jpg"></a>
-        </div>
-            <div class="text-container">
-            Yuzuru Hanyu/ <a id = "caption" href="https://commons.wikimedia.org/wiki/File:2020_4CC_Yuzu_Seimei2.jpg">HanyuMuse</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
-        </div>
+ 
 
-        <div class="text-container" id="fgskate">  
+       
+            <p class="body-text serif"> 
             <p>While the judging panel carefully grades the technical elements executed by each skater, it also evaluates music interpretation—it is one of the five components skaters are scored on. Skaters usually perform the same programs (short program, free skating, and exhibition) each season, meaning they need to select at least two songs that they will use over the entire season. This makes the right choice of music crucial.
 
 
             </p>
             
-            <p>There are a few figure skating musical standards—chief among them Puccini’s “Turandot” and Ravel’s “Boléro.” Indeed, classical music is a regular go-to for figure skaters.
+            
+            <p class="body-text serif">There are a few figure skating musical standards—chief among them Puccini’s “Turandot” and Ravel’s “Boléro.” Indeed, classical music is a regular go-to for figure skaters.
             </p>
 
-            <p>However, since the 2014–15 season, when <a href="https://www.nytimes.com/2022/02/09/sports/olympics/playlist-mens-free-skate.html">singles and pairs skaters have been permitted to compete to music with lyrics</a>, the music heard on the rink has become much more diverse. The 2022 Beijing Olympic Winter Games are a case in point. 
+            
+            <p class="body-text serif">However, since the 2014–15 season, when <a href="https://www.nytimes.com/2022/02/09/sports/olympics/playlist-mens-free-skate.html">singles and pairs skaters have been permitted to compete to music with lyrics</a>, the music heard on the rink has become much more diverse. The 2022 Beijing Olympic Winter Games are a case in point. 
                 
             </p>
 
-            <p>The men’s figure skating programs at this year’s Olympics were particularly musically eclectic. Adam Siao Him Fa of France skated to a Daft Punk mash-up, while Donovan Carrillo of Mexico chose “Black Magic Woman” by the Latin rock band Santana. Hanyu, who ended up fourth place, skated to the classical “Introduction and Rondo Capriccioso” by Camille Saint-Saëns for his short program. The piece was edited and played by a professional pianist exclusively for his performance.  
+            
+            <p class="body-text serif">The men’s figure skating programs at this year’s Olympics were particularly musically eclectic. Adam Siao Him Fa of France skated to a Daft Punk mash-up, while Donovan Carrillo of Mexico chose “Black Magic Woman” by the Latin rock band Santana. Hanyu, who ended up fourth place, skated to the classical “Introduction and Rondo Capriccioso” by Camille Saint-Saëns for his short program. The piece was edited and played by a professional pianist exclusively for his performance.  
 
             </p>
             
             <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Mais ouiii, notre espoir Adam Siao Him Fa (21 ans) qui met le feu sur un medley de Daft Punk et claque un personal best aux JO en libre (163.41 pts), et il prend la 2e place provisoire (les meilleurs sont à venir mais il peut gagner qq places après sa 14e au court) <a href="https://t.co/qUgOWUi22d">pic.twitter.com/qUgOWUi22d</a></p>&mdash; Philippe Berry (@ptiberry) <a href="https://twitter.com/ptiberry/status/1491613890320343041?ref_src=twsrc%5Etfw">February 10, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-            <p>Three medalists at the Beijing Olympics—Nathan Chen of the US, and Yuma Kagiyama and Shoma Uno of Japan—also skated to music from very different genres. In the free skating program, Chen performed energetically to an Elton John medley, while Kagiyama skated perfectly to the instrumental score from Gladiator. Uno chose the classic “Boléro” and ended up winning two Olympic medals in a row.  
+           
+            <p class="body-text serif">Three medalists at the Beijing Olympics—Nathan Chen of the US, and Yuma Kagiyama and Shoma Uno of Japan—also skated to music from very different genres. In the free skating program, Chen performed energetically to an Elton John medley, while Kagiyama skated perfectly to the instrumental score from Gladiator. Uno chose the classic “Boléro” and ended up winning two Olympic medals in a row.  
             </p> 
             
-            <div id="class1">
+            <p class ="photo-section">
                 <img src="threemedalist2.png" alt="Yuma Kagiyama, Nathan Chen, Shoma Uno (from left)" > 
-                </div>
+            </p>
             
-            </div>
-                <div class="text-container">   
+            
+                <p class="caption">   
                     Yuma Kagiyama, Nathan Chen, Shoma Uno (from left)/ <a id = "caption" href="https://commons.wikimedia.org/wiki/File:Ok_2019_Internationaux_de_France_Saturday_medals_men_8D9A8353.jpg">Aude Mugnier</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>,<a href="https://commons.wikimedia.org/wiki/File:Uno_-_2018_Olympics.jpg">David W. Carmichael - davecskatingphoto.com.</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:2020-01-12_Medals_Ceremonies_(2020_Winter_Youth_Olympics)_by_Sandro_Halank%E2%80%93185.jpg">Sandro Halank, Wikimedia Commons, CC BY-SA 4.0</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
-                
-            </div>
-            </div>
+                </p>
+
+                <br>
+                <br>
+                <br>
 
 
-            <div class="text-container" id="fgskate">  
-            <p>
+            <p class="body-text serif">
                 Wanting to understand more about these musical choices, and because there are few figure-skating musical databases available online, I scraped together a program table for each skater from Wikipedia  and made individual music lists for their short programs and free skating. If a song had its own Wikipedia page, I extracted the primary musical genre of the song from there. If it did not, I guessed a song’s genre based on the musician or composer. 
             </p>
 
-            <p>
+            <p class="body-text serif">
                 I roughly separated the musical genres into three categories: classical, experimental, and popular. For analytical purposes, I combined some musical subgenres under the one heading. For example, I categorized electropop and trance music under electronic music. 
                    
             </p>
 
-            <p>
+            <p class="body-text serif">
                 Note: I excluded exhibition programs from the analysis. Exhibition programs are not competition; rather, they showcase skaters’ skills with no pressure or scores awarded. The songs played at exhibition galas tend to be popular songs or other ‘lift-me-up’ types of music. For example, Chen selected Avicii’s “The Nights” for this season’s exhibition.
             </p>
 
-            <p>
+            <p class="body-text serif">
                 Here is the musical genre breakdown for Chen, Kagiyama, and Uno over the past ten seasons.  
             </p>
 
             <iframe title="Nathan Chen's recent favorite is non-classical music" aria-label="Stacked Column Chart" id="datawrapper-chart-nDZkP" src="https://datawrapper.dwcdn.net/nDZkP/9/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
             </script>
 
-            <p>
+<p class="body-text serif">
                 It seems that Chen used to choose classical music for his program but gradually shifted toward pop/rock songs. This season, he chose some classical music (Mozart’s “Piano Concerto No. 23” and “Lacrimosa”), but at the Beijing Olympics he only selected a chanson , “La Bohème,” for his short program, and a medley of Elton John’s “Goodbye Yellow Brick Road,” “Rocket Man,” and “Bennie and the Jets” for free skating. All the songs that won him his first Olympics gold medal were songs with lyrics . 
  
             </p> 
-            <iframe title="Rising star Yuma Kagiyama adores music in films" aria-label="Stacked Column Chart" id="datawrapper-chart-MxXLy" src="https://datawrapper.dwcdn.net/MxXLy/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+            <iframe title="Rising star Yuma Kagiyama adores music in films" aria-label="Stacked Column Chart" id="datawrapper-chart-MxXLy" src="https://datawrapper.dwcdn.net/MxXLy/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
             </script>
 
-            <p>
+<p class="body-text serif">
                 Kagiyama, a rising star, seems to largely avoid classical music. Instead, he loves film scores, like the instrumental soundtracks from Avatar and The Lord of the Rings  (2020–21 season). One of the two classical pieces he skated to was “The Firebird” by Igor Stravinsky, a ballet work. Kagiyama’s father, Masakazu, a former figure skater and two-time Olympian, also performed to the piece. 
             </p>
 
             <iframe title="Shoma Uno constantly goes for classical music" aria-label="Stacked Column Chart" id="datawrapper-chart-c2wgd" src="https://datawrapper.dwcdn.net/c2wgd/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
             </script>
-            <p>
+
+
+            <p class="body-text serif">
                 In contrast, Uno’s choice of music definitely falls into the classical category, but he also likes to explore new realms. In Beijing, for his short program, he skated to “Oboe Concerto” by the Venetian classical composer Alessandro Marcello, and used “Boléro” for his free skating program. However, he also enjoys skating to electronic music, which is not as popular among other skaters. During the 2020–21 and 2019–20 seasons, he skated to <a href="https://figure-skating.fandom.com/wiki/Great_Spirit">“Great Spirit” </a>by Dutch DJ Armin van Buuren and Israeli psytrance duo Vini Vici, which apparently had never before been used by any figure skater.
             </p>
            
              
-            <p>
+            <p class="body-text serif">
                 "You hear this music every single day,” Chen said in the interview with USA TODAY. "So if something that is not fun to skate to, it becomes kind of a chore."  
             </p>
 
-            <p>
-                "You hear this music every single day, " Chen said in the interview with USA TODAY. "So if something that is not fun to skate, it becomes kind of a chore for a period of time."
- 
-            </p>
-            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">HISTORY‼️<br><br>Nathan Chen set the highest ever score in a men’s short program ❄️<br><br>(via <a href="https://twitter.com/NBCOlympics?ref_src=twsrc%5Etfw">@NBCOlympics</a>)<a href="https://t.co/NbyZcdvzKD">pic.twitter.com/NbyZcdvzKD</a></p>&mdash; SportsCenter (@SportsCenter) <a href="https://twitter.com/SportsCenter/status/1490921254554984449?ref_src=twsrc%5Etfw">February 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">You&#39;re a Rocket Man, <a href="https://twitter.com/nathanwchen?ref_src=twsrc%5Etfw">@nathanwchen</a>! 🚀⛸️<br><br>Nathan Chen is now an Olympic champion after a stellar free program performance at <a href="https://twitter.com/hashtag/Beijing2022?src=hash&amp;ref_src=twsrc%5Etfw">#Beijing2022</a>. 🥇⁠ <a href="https://t.co/LcybUl3Qdl">pic.twitter.com/LcybUl3Qdl</a></p>&mdash; The Olympic Games (@Olympics) <a href="https://twitter.com/Olympics/status/1497541957802807296?ref_src=twsrc%5Etfw">February 26, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
            
-        </div>
-        <div class="text-container" id="footnote">
-            <p>This story was done for Data Studio, a class in the Columbia Journalism School. You can view source code for this project in the GitHub repository below.
+        
+        <p class="footer">
+            <p>This story was done for Data Studio, a class in the Columbia Journalism School. You can view source code for this project in <a href="https://github.com/naokatoh/figure_skate_music">this GitHub repository</a>.
             </p>
 
-
-            
-            <a href="https://github.com/naokatoh/figure_skate_music"><img src="https://gh-card.dev/repos/naokatoh/figure_skate_music.svg"></a>
            
             <br>
             <br>
